@@ -7,3 +7,4 @@ El presente proyecto consiste en el desarrollo de una página web para una tiend
 ![Catalogo](img/a.PNG)
 ![Carrito](img/b.PNG)
 
+[Videos Trabajo](https://mega.nz/folder/dA0HXQga#fluHjCk1wtNdcpFQGdOnbw)
