@@ -1,28 +1,31 @@
 <?php
+// Inicia una nueva sesión o reanuda la existente
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Limpia y obtiene los datos ingresados por el usuario
     $correo = trim($_POST['correo']);
     $contraseña = $_POST['contraseña'];
-
+    // Establece conexión con la base de datos
     $conexion = new mysqli("localhost", "root", "password123", "tienda_deportiva");
     if ($conexion->connect_error) {
         die("Error de conexión: " . $conexion->connect_error);
     }
-
+    // Consulta para buscar un usuario con el correo proporcionado
     $sql = "SELECT * FROM usuarios WHERE correo = ?";
     $stmt = $conexion->prepare($sql);
     $stmt->bind_param("s", $correo);
     $stmt->execute();
     $resultado = $stmt->get_result();
 
-    if ($resultado->num_rows == 1) {
+    if ($resultado->num_rows == 1) {  // Verifica si se encontró un único usuario
         $usuario = $resultado->fetch_assoc();
-        if (password_verify($contraseña, $usuario['contraseña'])) {
+        if (password_verify($contraseña, $usuario['contraseña'])) { 
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nombre'] = $usuario['nombre'];
             $_SESSION['correo'] = $usuario['correo'];
             $_SESSION['tipo'] = $usuario['tipo'];
+            // Redirige al usuario a la página principal
             header("Location: index.php");
             exit();
         } else {
