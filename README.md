@@ -15,7 +15,7 @@ Schema de las diversas tablas utilizadas en la BBDD 'tienda_deportiva'
 
 ![Carrito](img/schema.PNG)
 
-# Videos Objetivos:
+# Videos (Objetivos)
 - [RF01: Crear, modificar o eliminar usuarios de clientes y tipo administrador (Usuario Administrador)](https://mega.nz/file/EMFgVB4Y#SiIE1b9mh6LN0qJ0ye5JHIXnymml80dpSW6cx2onLQM)
 - [RF02: Crear, modificar o eliminar ítems/artículos de la tienda (Usuario Administrador)](https://mega.nz/file/4RlhFRzL#CodwRxZmhLhCdjSQwMxvIIAWoYX0beQOKshxOQatnYk)
 - [Rf03: Permitir la navegación y visita de artículos permitiendo agregar al carrito de compras los artículos y confirmar la compra (Usuario Cliente)](https://mega.nz/file/gQlSGBBZ#NcIeekOAWjpKnueDiu4WUz4Gxi2GYUEl5vB06qHhEXg)
