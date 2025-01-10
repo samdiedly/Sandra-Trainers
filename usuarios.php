@@ -1,14 +1,15 @@
 <?php
 session_start();
 
+// Debugging errores
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-
+// Verifica si el usuario tiene privilegios de administrador
 if ($_SESSION['tipo'] != "administrador") {
     header("Location: index.php");
     exit();
 }
-
+// Establece conexión con la base de datos
 $conexion = new mysqli("localhost", "root", "password123", "tienda_deportiva");
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
@@ -17,7 +18,7 @@ if ($conexion->connect_error) {
 // Obtener usuarios existentes
 $sql = "SELECT * FROM usuarios";
 $resultado = $conexion->query($sql);
-
+// Procesa las acciones del formulario si se envía una solicitud POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['accion']) && $_POST['accion'] == 'agregar') {
         // Agregar nuevo usuario
