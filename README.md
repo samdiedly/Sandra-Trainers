@@ -7,6 +7,10 @@ El presente proyecto consiste en el desarrollo de una página web para una tiend
 ![Catalogo](img/a.PNG)
 ![Carrito](img/b.PNG)
 
+Conexiones de los difersos recursos (vista GUI)
+
+![Vista Lógica](img/connections.PNG)
+
 Schema de las diversas tablas eutilizadas en la BBDD 'tienda_deportiva'
 
 ![Carrito](img/schema.PNG)
